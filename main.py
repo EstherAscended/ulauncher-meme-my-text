@@ -4,6 +4,7 @@ from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
 from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
+from ulauncher.api.shared.action.CopyToClipboardAction import CopyToClipboardAction
 import meme
 
 
@@ -21,7 +22,7 @@ class KeywordQueryEventListener(EventListener):
             list_to_append.append(ExtensionResultItem(icon='images/icon.png',
                                              name=name,
                                              description=description,
-                                             on_enter=HideWindowAction()))
+                                             on_enter=CopyToClipboardAction(description)))
         items = []
         for i in range(2):
             if i == 0:
