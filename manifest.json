@@ -1,0 +1,19 @@
+{
+  "required_api_version": "^2.0.0",
+  "name": "Meme My Text",
+  "description": "A simple extension allowing for easy access to commonly used joke text modifications.",
+  "developer_name": "Russell Nairn",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.05
+  },
+  "preferences": [
+    {
+      "id": "meme_my_text",
+      "type": "keyword",
+      "name": "Meme",
+      "description": "Text memeing extension",
+      "default_value": "meme"
+    }
+  ]
+}
