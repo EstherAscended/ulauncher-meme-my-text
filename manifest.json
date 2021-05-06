@@ -14,6 +14,27 @@
       "name": "Meme",
       "description": "Text memeing extension",
       "default_value": "meme"
+    },
+    {
+      "id": "ran_cap_enabled",
+      "type": "select",
+      "name": "Random Capitalization Enabled",
+      "default_value": "true",
+      "options": [true, false]
+    },
+    {
+      "id": "vaporwave_enabled",
+      "type": "select",
+      "name": "Vaporwave Enabled",
+      "default_value": "true",
+      "options": [true, false]
+    },
+    {
+      "id": "reverse_enabled",
+      "type": "select",
+      "name": "Reverse Enabled",
+      "default_value": "true",
+      "options": [true, false]
     }
   ]
 }

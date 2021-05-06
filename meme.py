@@ -12,9 +12,17 @@ def ran_cap(text_input):
     output = ""
     return output.join(chars)
 
+
 def vaporwave(text_input):
     chars = list(text_input)
     for i in range(len(chars)):
         chars[i] = chars[i].upper()
     output = " "
+    return output.join(chars)
+
+
+def reverse(text_input):
+    chars = list(text_input)
+    chars.reverse()
+    output = ""
     return output.join(chars)

@@ -3,7 +3,6 @@ from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
 from ulauncher.api.shared.item.ExtensionResultItem import ExtensionResultItem
 from ulauncher.api.shared.action.RenderResultListAction import RenderResultListAction
-from ulauncher.api.shared.action.HideWindowAction import HideWindowAction
 from ulauncher.api.shared.action.CopyToClipboardAction import CopyToClipboardAction
 import meme
 
@@ -23,12 +22,19 @@ class KeywordQueryEventListener(EventListener):
                                              name=name,
                                              description=description,
                                              on_enter=CopyToClipboardAction(description)))
+
+        is_ran_cap_enabled = extension.preferences["ran_cap_enabled"]
+        is_vaporwave_enabled = extension.preferences["vaporwave_enabled"]
+        is_reverse_enabled = extension.preferences["reverse_enabled"]
+
         items = []
-        for i in range(2):
-            if i == 0:
+        for i in range(3):
+            if i == 0 and is_ran_cap_enabled == "true":
                 append_to_list(items, "Random Capitalization", meme.ran_cap(event.get_argument()))
-            elif i == 1:
+            elif i == 1 and is_vaporwave_enabled == "true":
                 append_to_list(items, "Vaporwave", meme.vaporwave(event.get_argument()))
+            elif i == 2 and is_reverse_enabled == "true":
+                append_to_list(items, "Reverse", meme.reverse(event.get_argument()))
 
         return RenderResultListAction(items)
 
