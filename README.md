@@ -30,6 +30,7 @@ The currently available text modifications are:
 - Random Capitalization
 - Vaporwave
 - Reverse
+- Pig Latin
 
 I will be adding more as I feel inclined/as I think of them. You're welcome to give 
 suggestions for modifications and I will probably add them if I think they fit.

@@ -26,15 +26,18 @@ class KeywordQueryEventListener(EventListener):
         is_ran_cap_enabled = extension.preferences["ran_cap_enabled"]
         is_vaporwave_enabled = extension.preferences["vaporwave_enabled"]
         is_reverse_enabled = extension.preferences["reverse_enabled"]
+        is_pig_latin_enabled = extension.preferences["pig_latin_enabled"]
 
         items = []
-        for i in range(3):
+        for i in range(4):
             if i == 0 and is_ran_cap_enabled == "true":
                 append_to_list(items, "Random Capitalization", meme.ran_cap(event.get_argument()))
             elif i == 1 and is_vaporwave_enabled == "true":
                 append_to_list(items, "Vaporwave", meme.vaporwave(event.get_argument()))
             elif i == 2 and is_reverse_enabled == "true":
                 append_to_list(items, "Reverse", meme.reverse(event.get_argument()))
+            elif i == 3 and is_pig_latin_enabled == "true":
+                append_to_list(items, "Pig Latin", meme.pig_latin(event.get_argument()))
 
         return RenderResultListAction(items)
 

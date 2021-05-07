@@ -35,6 +35,13 @@
       "name": "Reverse Enabled",
       "default_value": "true",
       "options": [true, false]
+    },
+    {
+      "id": "pig_latin_enabled",
+      "type": "select",
+      "name": "Pig Latin Enabled",
+      "default_value": "true",
+      "options": [true, false]
     }
   ]
 }
